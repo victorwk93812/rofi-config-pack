@@ -79,13 +79,13 @@ run_rofi() {
 # Execute Command
 run_cmd() {
 	if [[ "$1" == '--opt1' ]]; then
-		light -A 5
+        brightnessctl set +5%
 	elif [[ "$1" == '--opt2' ]]; then
-		light -S 25
+        brightnessctl set 25%
 	elif [[ "$1" == '--opt3' ]]; then
-		light -U 5
+        brightnessctl set 5%-
 	elif [[ "$1" == '--opt4' ]]; then
-		xfce4-power-manager-settings
+		kitty --hold zsh -c "brightnessctl g"
 	fi
 }
 

@@ -22,12 +22,12 @@ elif [[ ( "$theme" == *'type-2'* ) || ( "$theme" == *'type-4'* ) ]]; then
 fi
 
 # CMDs (add your apps here)
-term_cmd='alacritty'
-file_cmd='thunar'
-text_cmd='geany'
-web_cmd='firefox'
-music_cmd='alacritty -e ncmpcpp'
-setting_cmd='xfce4-settings-manager'
+term_cmd='kitty'
+file_cmd='dolphin'
+text_cmd='kitty --hold zsh -c nvim'
+web_cmd='vivaldi'
+music_cmd='kitty --hold zsh -c mpv'
+setting_cmd='kitty --hold zsh -c "cd ~/.config/home-manager/"'
 
 # Options
 layout=`cat ${theme} | grep 'USE_ICON' | cut -d'=' -f2`
